@@ -1,5 +1,5 @@
 import Link from "next/link"
-import NavItem from "./NavItem"
+import NavItem from "./HeaderItem"
 import DarkModeSwitch from "./DarkModeSwitch"
 //these are actually functions below:
 //which means we can use it as a component tag instead of an img tag

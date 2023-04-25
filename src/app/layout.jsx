@@ -3,6 +3,7 @@
 import './globals.css' //== index.css
 import { Inter } from 'next/font/google'
 import Header from './components/Header'
+import Nav from './components/SubNav'
 import Providers from './Providers' //exists outside of components folder
 
 const inter = Inter({ subsets: ['latin'] }) //defines a font family
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers> {/*DARK MODE PROVIDER*/}
         <Header/> {/*all children of Providers.jsx*/}
-        {/* NAVBAR */} {/*all children of Providers.jsx*/}
+        <Nav /> {/*all children of Providers.jsx*/}
         {/* SEARCHBOX */} {/*all children of Providers.jsx*/}
         {children} {/*all children of Providers.jsx*/}
         </Providers> {/*all children of Providers.jsx*/}

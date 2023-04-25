@@ -24,9 +24,9 @@ const DarkModeSwitch = () => {
     return(
         <>
         {mounted && currentTheme === "dark" ? (
-            <BsFillSunFill className="hover:text-amber-500 text-xl text-gray-50" onClick={() => setTheme("light")}/>
+            <BsFillSunFill className="hover:text-amber-500 text-xl text-gray-50 transition" onClick={() => setTheme("light")}/>
         ): (
-            <MdDarkMode className="hover:text-amber-500 text-xl text-gray-900" onClick={() => setTheme("dark")}/>
+            <MdDarkMode className="hover:text-amber-500 text-xl text-gray-900 transition" onClick={() => setTheme("dark")}/>
         )}
         </>
     )
