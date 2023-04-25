@@ -1,22 +1,25 @@
-"use client"
+"use client" //this is a directive to set rendering to client side (default is server side)
 
-import { MdDarkMode } from 'react-icons/md'
-import { BsFillSunFill } from 'react-icons/bs'
-import { useTheme } from 'next-themes'
+import { MdDarkMode } from 'react-icons/md' //react-icons (functional components)
+import { BsFillSunFill } from 'react-icons/bs' //react-icons (functional components)
+import { useTheme } from 'next-themes' //from next-themes (allows easy switch between light/dark modes)
 import { useEffect, useState } from 'react'
 
 const DarkModeSwitch = () => {
 
-    const { systemTheme, theme, setTheme } = useTheme()
+    const { systemTheme, theme, setTheme } = useTheme() //destructure from useTheme() (context)
 
     // ***********wait until component is mounted***************
     const [mounted, setMounted] = useState(false)
     useEffect(() => {
-        setMounted(true)
+        setMounted(true) //runs to wait until we are fully loaded before we can setTheme
     }, [])
     // *********************************************************
 
-    const currentTheme = theme === "system" ? systemTheme : theme
+
+    //This line of code initializes a variable called currentTheme based on 
+    //the value of a theme variable, which could be either "system" or a custom theme name.
+    const currentTheme = theme === "system" ? systemTheme : theme //system comes from preferred mode on OS
 
     return(
         <>

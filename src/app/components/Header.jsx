@@ -9,12 +9,12 @@ import { AiFillInfoCircle } from 'react-icons/ai'
 
 const Header = () => {
     return (
-        <nav className="flex justify-around items-center p-5">
-            <div className="flex items-center gap-5 py-4">
+        <nav className="flex justify-around items-center p-5"> {/*nav bar*/}
+            <div className="flex items-center gap-5 py-4"> {/*nav items (home and about links)*/}
                 <NavItem title={"Home"} address={"/"} Icon={AiFillHome} />
                 <NavItem title={"About"} address={"/about"} Icon={AiFillInfoCircle} />
             </div>
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-10"> {/*dark/light mode switch and logo*/}
                 <DarkModeSwitch />
                 <Link href={'/'} className="flex items-center">
                     <h2 className="text-2xl flex items-center gap-1">
