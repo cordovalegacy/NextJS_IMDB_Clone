@@ -31,7 +31,7 @@ const Home = async ({ searchParams }) => {
     const data = await result.json() //sets api data
     // console.log("Movie Data", data)
     res = data.results
-    console.log("Res Array: ", res)
+    // console.log("Res Array: ", res)
   }
 
   return (
