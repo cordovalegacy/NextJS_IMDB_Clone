@@ -6,7 +6,7 @@ const Results = ({ res }) => {
             <h1 className='font-bold'>Home</h1>
             <div className="flex flex-wrap justify-evenly items-center">
                 {res.map((movies) => (
-                    <div className="flex flex-col border p-2 rounded-sm">
+                    <div className="flex flex-col border bg-gray-800 p-2 rounded-md">
                         <h2>{movies.title}</h2>
                     </div>
                 ))
