@@ -3,7 +3,7 @@
 import './globals.css' //== index.css
 import { Inter } from 'next/font/google'
 import Header from './components/Header'
-import Nav from './components/SubNav'
+import Nav from './components/Nav'
 import Providers from './Providers' //exists outside of components folder
 
 const inter = Inter({ subsets: ['latin'] }) //defines a font family
