@@ -1,12 +1,12 @@
 
 
 const Loading = () => {
-    return(
+    return (
         <div className="flex justify-center">
-            <img 
-            src="spinner.svg" 
-            alt="loading icon"
-            className="w-96" 
+            <img
+                src="spinner.svg"
+                alt="loading icon"
+                className="w-96"
             />
         </div>
     )
