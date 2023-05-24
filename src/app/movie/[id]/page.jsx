@@ -11,13 +11,13 @@ const MoviePage = async ({ params }) => {
     console.log("WHOAAAAAAAAAAAAAAAAAAAAAAAAAA", movie)
 
     return (
-        <div className="flex items-start justify-evenly p-5">
+        <div className="flex items-start justify-evenly p-5 mt-6">
             <div className="text-center font-semibold text-lg">
-                <h2>{movie.title || movie.name}</h2>
+                <h2 className="underline decoration-amber-500 underline-offset-4 mb-6">{movie.title || movie.name}</h2>
                 <Image
                     width={250}
                     height={300}
-                    className="rounded-lg"
+                    className="rounded-lg mx-auto shadow-sm shadow-amber-600"
                     placeholder="blur"
                     blurDataURL="/spinner.svg"
                     alt="movie picture"
@@ -29,8 +29,9 @@ const MoviePage = async ({ params }) => {
                 />
             </div>
             <div className="text-center">
-                <h3 className="font-semibold text-lg underline">Movie Details</h3>
-                <div className="flex flex-col">
+                <h3 className="font-semibold text-lg mb-6 underline decoration-amber-500 underline-offset-4">Movie Details</h3>
+                <p className="w-80 italic font-semibold">{movie?.tagline}</p>
+                <div className="flex flex-col mt-10">
                     <div className="flex items-center justify-center gap-1 w-80">
                         <p>Rating: {movie.vote_average}</p>
                         <br />

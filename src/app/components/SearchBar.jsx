@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 
 const SearchBar = () => {
 
@@ -14,6 +14,7 @@ const SearchBar = () => {
             return
         }
         router.push(`/search/${searchData}`)
+        setSearchData("")
     }
 
     return (
@@ -29,13 +30,13 @@ const SearchBar = () => {
                 <input
                     type="submit"
                     value="Search"
-                    className="bg-amber-600 rounded-md p-1 disabled:text-gray-400"
+                    className="bg-amber-600 rounded-md p-1 disabled:text-gray-400 cursor-not-allowed"
                     disabled
                 /> :
                 <input
                     type="submit"
                     value="Search"
-                    className="bg-amber-600 rounded-md p-1 disabled:text-gray-400"
+                    className="bg-amber-600 rounded-md p-1 disabled:text-gray-400 cursor-pointer"
                 />
             }
         </form>
